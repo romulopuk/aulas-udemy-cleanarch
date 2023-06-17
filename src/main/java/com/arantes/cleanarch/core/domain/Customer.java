@@ -1,5 +1,7 @@
 package com.arantes.cleanarch.core.domain;
 
+import com.arantes.cleanarch.dataprovider.repository.entity.CustomerEntity;
+
 public record Customer(
         String id,
         String name,
@@ -14,5 +16,13 @@ public record Customer(
                 customerInfo.cpf,
                 addressInfo,
                 false);
+    }
+
+    public Customer(CustomerEntity entity) {
+        this(entity.getId(),
+                entity.getName(),
+                entity.getCpf(),
+                new Address(entity.getAddress()),
+                entity.getIsValidCpf());
     }
 }
