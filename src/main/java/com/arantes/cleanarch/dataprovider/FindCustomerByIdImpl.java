@@ -5,10 +5,12 @@ import com.arantes.cleanarch.core.domain.Customer;
 import com.arantes.cleanarch.dataprovider.repository.CustomerRepository;
 import com.arantes.cleanarch.dataprovider.repository.mapper.CustomerEntityMapper;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 import java.util.Optional;
 
 @RequiredArgsConstructor
+@Component
 public class FindCustomerByIdImpl implements FindCustomerById {
 
     private final CustomerRepository repository;

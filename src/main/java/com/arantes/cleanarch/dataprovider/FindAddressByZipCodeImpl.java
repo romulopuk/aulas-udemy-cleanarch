@@ -4,8 +4,10 @@ import com.arantes.cleanarch.core.dataprovider.FindAdressByZipCode;
 import com.arantes.cleanarch.core.domain.Address;
 import com.arantes.cleanarch.dataprovider.client.FindAdressByZipCodeClient;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
 
 @RequiredArgsConstructor
+@Component
 public class FindAddressByZipCodeImpl implements FindAdressByZipCode {
 
     private final FindAdressByZipCodeClient client;
